@@ -1,0 +1,26 @@
+{
+  "name": "server-binaries",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build --compile --target=node --minify --outfile=dist/serenityjs src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@serenityjs/binarystream": "^2.7.0",
+    "@serenityjs/core": "^0.7.1-beta-20250123042006",
+    "@serenityjs/data": "^0.7.1-beta-20250123042006",
+    "@serenityjs/emitter": "^0.7.1-beta-20250123042006",
+    "@serenityjs/leveldb": "^1.0.1",
+    "@serenityjs/logger": "^0.7.1-beta-20250123042006",
+    "@serenityjs/nbt": "^0.7.1-beta-20250123042006",
+    "@serenityjs/plugins": "^0.7.1-beta-20250123042006",
+    "@serenityjs/protocol": "^0.7.1-beta-20250123042006",
+    "@serenityjs/raknet": "^0.7.1-beta-20250123042006"
+  }
+}
