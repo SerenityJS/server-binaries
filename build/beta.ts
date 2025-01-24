@@ -1,18 +1,18 @@
 import { execSync } from "node:child_process";
 import { readFileSync } from "node:fs"
 
-// const packages = [
-//   "@serenityjs/core",
-//   "@serenityjs/data",
-//   "@serenityjs/emitter",
-//   "@serenityjs/logger",
-//   "@serenityjs/nbt",
-//   "@serenityjs/plugins",
-//   "@serenityjs/protocol",
-//   "@serenityjs/raknet"
-// ].map(pkg => `${pkg}@beta`);
+const packages = [
+  "@serenityjs/core",
+  "@serenityjs/data",
+  "@serenityjs/emitter",
+  "@serenityjs/logger",
+  "@serenityjs/nbt",
+  "@serenityjs/plugins",
+  "@serenityjs/protocol",
+  "@serenityjs/raknet"
+].map(pkg => `${pkg}@beta`);
 
-// execSync(`bun add ${packages.join(" ")}`)
+execSync(`bun add ${packages.join(" ")}`)
 
 const { dependencies } = JSON.parse(readFileSync("package.json").toString());
 
