@@ -1,7 +1,9 @@
-name: Build SerenityJS
+name: 🔄 Twice Daily Build SerenityJS  
 
 on:
-  workflow_dispatch:  # This makes the workflow manually triggered only
+  schedule:
+    - cron: '0 0,12 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -11,21 +13,21 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
-      - name: Checkout repository
+      - name: 📥 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Bun
+      - name: 🔧 Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
 
-      - name: Install dependencies
+      - name: 📦 Install Dependencies
         run: bun install
 
-      - name: Build SerenityJS
+      - name: 🏗️ Build SerenityJS
         run: bun run build
 
-      - name: Upload Artifact
+      - name: 📤 Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: serenityjs-${{ matrix.os }}
