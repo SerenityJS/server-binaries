@@ -28,5 +28,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: serenityjs
+          name: serenityjs-${{ matrix.os }}
           path: dist
