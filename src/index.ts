@@ -1,4 +1,6 @@
-import { Serenity, LevelDBProvider } from "@serenityjs/core";
+import { isMainThread } from "node:worker_threads";
+
+import { Serenity, LevelDBProvider, SuperflatWorker, TerrainWorker } from "@serenityjs/core";
 import { Pipeline } from "@serenityjs/plugins";
 
 import { Modules } from "./modules"
@@ -12,20 +14,27 @@ Bun.plugin({
   },
 });
 
-// Create a new Serenity instance
-const serenity = new Serenity({
-  path: "./properties.json",
-  serenity: {
-    permissions: "./permissions.json",
-    resourcePacks: "./resource_packs"
-  }
-});
+// Redefine the path of the workers
+SuperflatWorker.path = process.argv[1]
+TerrainWorker.path = process.argv[1]
 
-// Create a new plugin pipeline
-new Pipeline(serenity, { path: "./plugins" });
+// Check if the current thread is the main thread
+if (isMainThread) {
+  // Create a new Serenity instance
+  const serenity = new Serenity({
+    path: "./properties.json",
+    serenity: {
+      permissions: "./permissions.json",
+      resourcePacks: "./resource_packs"
+    }
+  });
 
-// Register the LevelDBProvider
-serenity.registerProvider(LevelDBProvider, { path: "./worlds" });
+  // Create a new plugin pipeline
+  new Pipeline(serenity, { path: "./plugins" });
 
-// Start the server
-serenity.start();
+  // Register the LevelDBProvider
+  serenity.registerProvider(LevelDBProvider, { path: "./worlds" });
+
+  // Start the server
+  serenity.start();
+}
