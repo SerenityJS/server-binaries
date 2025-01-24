@@ -28,9 +28,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SerenityJS
-          path: |
-            dist/serenityjs-win32-x64.exe
-            dist/serenityjs-darwin-x64
-            dist/serenityjs-linux-x64
-          retention-days: 7
+          name: serenityjs
+          path: dist
