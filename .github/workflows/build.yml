@@ -23,11 +23,11 @@ jobs:
         run: bun install
 
       - name: Build SerenityJS
-        run: bun build --compile --target=node --minify --outfile=dist/serenityjs-${{ runner.os }} src/index.ts
+        run: bun build --compile --target=node --minify --outfile=dist/serenityjs-${{ runner.arch }} src/index.ts
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: serenityjs-${{ runner.os }}
-          path: dist/serenityjs-${{ runner.os }}
+          name: serenityjs-${{ runner.arch }}
+          path: dist/serenityjs-${{ runner.arch }}
           retention-days: 7
