@@ -14,14 +14,14 @@
   },
   "dependencies": {
     "@serenityjs/binarystream": "^2.7.0",
-    "@serenityjs/core": "^0.7.0",
-    "@serenityjs/data": "^0.7.0",
-    "@serenityjs/emitter": "^0.7.0",
+    "@serenityjs/core": "^0.7.1-beta-20250124162118",
+    "@serenityjs/data": "^0.7.1-beta-20250124162118",
+    "@serenityjs/emitter": "^0.7.1-beta-20250124162118",
     "@serenityjs/leveldb": "^1.0.1",
-    "@serenityjs/logger": "^0.7.0",
-    "@serenityjs/nbt": "^0.7.0",
-    "@serenityjs/plugins": "^0.7.0",
-    "@serenityjs/protocol": "^0.7.0",
-    "@serenityjs/raknet": "^0.7.0"
+    "@serenityjs/logger": "^0.7.1-beta-20250124162118",
+    "@serenityjs/nbt": "^0.7.1-beta-20250124162118",
+    "@serenityjs/plugins": "^0.7.1-beta-20250124162118",
+    "@serenityjs/protocol": "^0.7.1-beta-20250124162118",
+    "@serenityjs/raknet": "^0.7.1-beta-20250124162118"
   }
 }

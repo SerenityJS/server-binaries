@@ -20,4 +20,4 @@ const version = dependencies["@serenityjs/core"].replace("^", "");
 const arch = process.arch.toLowerCase();
 const platform = process.platform.toLowerCase();
 
-execSync(`bun build --compile --target=node --outfile=dist/serenityjs-v${version}-${platform}-${arch} src/index.ts`)
+execSync(`bun build --compile --packages bundle --target=bun --outfile=dist/serenityjs-v${version}-${platform}-${arch} src/index.ts`);
