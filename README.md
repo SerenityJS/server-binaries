@@ -5,6 +5,7 @@ This repository contains prebuilt executable binaries that will run SerenityJS. 
 ## Compiling for Your Own Use  
 If you want to compile the binaries yourself:  
 1. Clone the repository.  
+3. Install dependencies `bun install`
 2. Run one of the following commands:  
    - For the latest release: `bun run build:latest`  
    - For the beta release: `bun run build:beta`  
