@@ -1,1 +1,1 @@
-# server-binaries
+# Pre-built SerenityJS Binaries

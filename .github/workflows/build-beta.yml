@@ -1,4 +1,4 @@
-name: 🔄 Twice Daily Build SerenityJS  
+name: 🔄 Twice Daily Build SerenityJS (Beta)
 
 on:
   schedule:
@@ -25,10 +25,10 @@ jobs:
         run: bun install
 
       - name: 🏗️ Build SerenityJS
-        run: bun run build
+        run: bun run build:beta
 
       - name: 📤 Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: serenityjs-${{ matrix.os }}
+          name: serenityjs-beta-${{ matrix.os }}
           path: dist
