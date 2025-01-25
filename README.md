@@ -1,6 +1,6 @@
 # Prebuilt SerenityJS Binaries  
 
-This repository contains prebuilt executable binaries that will run SerenityJS. We provide prebuilt x64 binaries for Windows, Linux, and macOS. GitHub Actions will automatically compile the binaries every 12 hours. Vist the latest [actions](https://github.com/SerenityJS/server-binaries/actions) for the latest release build.
+This repository contains prebuilt executable binaries that will run SerenityJS. We provide prebuilt x64 binaries for Windows, Linux, and macOS. GitHub Actions will automatically compile the binaries every 12 hours. Vist the latest [actions](https://github.com/SerenityJS/server-binaries/actions) for the latest release build, you must be logged into GitHub to access the download.
 
 ## Compiling for Your Own Use  
 If you want to compile the binaries yourself:  
