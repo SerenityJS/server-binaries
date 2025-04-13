@@ -1,6 +1,6 @@
 import { isMainThread } from "node:worker_threads";
 
-import { Serenity, LevelDBProvider, SuperflatWorker, TerrainWorker } from "@serenityjs/core";
+import { Serenity, LevelDBProvider } from "@serenityjs/core";
 import { Pipeline } from "@serenityjs/plugins";
 
 import { Modules } from "./modules"
@@ -13,10 +13,6 @@ Bun.plugin({
     for (const inject of Modules) inject(build);
   },
 });
-
-// Redefine the path of the workers
-SuperflatWorker.path = process.argv[1]
-TerrainWorker.path = process.argv[1]
 
 // Check if the current thread is the main thread
 if (isMainThread) {
